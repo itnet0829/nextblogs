@@ -1,0 +1,312 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.link{
+  display: block;
+}
+
+.gradientheader {
+  display: inline-block;
+  font-family: 'Permanent Marker', cursive;
+  background: -webkit-linear-gradient(45deg, #1930ff, #9f92ff 20%, #57f1ff 90%);
+  font-size: 7vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* 未対応ブラウザのために一応テキスト色を指定しておく */
+  color: blue;
+}
+
+.he-2{
+  font-size: 50px;
+  font-family: 'Sawarabi Mincho', cursive;
+  white-space: pre-wrap;
+}
+
+.headings{
+  height: 100vh;
+  position: relative;
+}
+
+.videoarea{
+  position: fixed;
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+
+.video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.contents{
+background:#0000004c;
+color: #fff;
+height: auto;
+width: 100vw;
+box-sizing: content-box;
+text-align: center;
+}
+
+.fesize{
+  font-size: 24px;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  white-space: pre-wrap;
+}
+
+.balloon {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+.faceicon {
+  float: left;
+  margin-left: 48px;
+  margin-top: -4px;
+  width: 80px;
+  border-radius: 100%;
+  padding: 0px 0;
+}
+
+.caption{
+  font-family:'Times New Roman', Times, serif;
+  color: #fff;
+  font-size: 35px;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 42vh;
+  transition: 0.5s ease;
+  display: none;
+  opacity: 0;
+}
+
+.baloon .faceicon img{
+  height: auto;
+  margin-left: -50px;
+}
+
+.baloon{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.howbtn{
+  width: 100%;
+  margin-top: 60px;
+}
+
+
+
+.exampleClass {
+	padding: 12px 24px;
+  background-color: rgba(0, 0, 0, 0.493);
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+  border: 1px solid;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.exampleClass:hover {
+	transform: scale(1.10);
+  background-color: #fff;
+  color: #000;
+  }
+
+.exampleClass:active {
+	transform: scale(0.9);
+}
+
+
+
+.note {
+  background-color: #000000; /* 背景色 */
+  background-image: linear-gradient(180deg, #ccc 1px, transparent 1px); /* 罫線の色と太さ  */
+  background-size: 100% 2.5em; /* 行の高さ */
+  line-height: 2.5em; /* 文字の高さ */
+  padding-bottom: 1px; /* 最終行の下にも罫線を引く */
+  text-align: left;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+.mailicon{
+  float: left;
+  margin-top: 2px;
+  margin-left: -10px;
+  margin-bottom: 200px;
+}
+
+.buttonszokusei{
+  font-size: 48px;
+  font-family:'Times New Roman', Times, serif;
+  color: #fff;
+  border: 1px solid;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 30vh;
+  transition: 0.5s ease;
+}
+
+.buttonszokusei:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .thirteen::before {
+    animation: none;
+  }
+
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo,
+  .thirteen img {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
